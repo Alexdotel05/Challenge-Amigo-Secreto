@@ -1,40 +1,42 @@
 //Array para almacenar lista de amigos.
 let listaDeAmigos = [];
 
-
-
-function agregarAmigo() { //Función para agregar amigo a la lista a través del imput.
+//Función para agregar amigo a la lista.
+function agregarAmigo() { 
+    // Si hay un resultado de sorteo previo, se borra al agregar un nuevo amigo
     document.getElementById('resultado').innerHTML = ""; 
 
     let nombre = document.querySelector('#amigo').value;
 
-    if (nombre.trim() === "") {   //Validar que el imput no esté vacío y agregar nombre a la lista.
+    if (nombre.trim() === "") {   //Validar que el imput no esté vacío.
         alert("Por favor, inserte un nombre."); 
     } else if (listaDeAmigos.includes(nombre)) { // Validar que el nombre no esté incluido en la lista.
         alert("El nombre ingresado ya existe, por favor ingrese otro nombre válido.");}
             else {listaDeAmigos.push(nombre);
 
         console.log(listaDeAmigos); // Verificar la lista de amigos en la consola.
-       document.getElementById('amigo').value = ""; // Limpiar el imput después de agregar nombre a la lista.
+       document.getElementById('amigo').value = ""; // Limpiar el imput.
        actualizarListaDeAmigos();
     }
 }
 
-function actualizarListaDeAmigos() { // Función para actualizar la lista de amigos en el HTML
+// Función para actualizar la lista de amigos en el HTML
+function actualizarListaDeAmigos() { 
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = "";  // Limpiar la lista antes de agregar nuevos elementos
 
-    for (let i = 0; i < listaDeAmigos.length; i++) { // Recorrer la lista y crear elementos de lista para cada nombre.
+    for (let i = 0; i < listaDeAmigos.length; i++) { 
         let li= document.createElement('li');
 
-        li.textContent = `${i + 1} - ${listaDeAmigos[i]}`; // Enumerar la lista de nombres inicianto en 1.
+        li.textContent = `${i + 1} - ${listaDeAmigos[i]}`; // Enumerar nombres en la lista.
         lista.appendChild(li);
         
     }
 
 }
 
-function sortearAmigo() { // Función para sortear el amigo secreto de manera aleatoria.
+// Función para sortear un amigo secreto aleatoriamente.
+function sortearAmigo() { 
     if (listaDeAmigos.length === 0) { // Validar que la lista no esté vacía y hay nombre disponibles e lalista.
         alert("No hay amigos para sortear");
         return;
@@ -46,11 +48,12 @@ function sortearAmigo() { // Función para sortear el amigo secreto de manera al
     reiniciarJuego();
 }
   
-function reiniciarJuego() { // Función para generar las condiciones iniciales luego de obtener el amigo sorteado.
-    listaDeAmigos = []; // Declarar la lista de nombres agregados vacía.
+//Función para reiniciar la ista y el imput
+function reiniciarJuego() { 
+    listaDeAmigos = []; // Vaciar array interno
 
-    document.getElementById('listaAmigos').innerHTML = ""; // Vaciar lista en el HTML
-    document.getElementById('amigo').value = ""; // Limpiar el imput
+    document.getElementById('listaAmigos').innerHTML = ""; // Vaciar lista visual
+    document.getElementById('amigo').value = ""; // Limpiar imput
      
 }   
  
