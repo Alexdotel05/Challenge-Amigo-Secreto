@@ -41,9 +41,11 @@ Permite:
 
 ## 📂 Estructura del Proyecto
 
+
 📁 proyecto-amigo-secreto
-├── index.html # Estructura principal del proyecto
-├── style.css # (Opcional) Estilos de la interfaz
+
+├── index.html # Estructura principal del proyecto   
+├── style.css # (Opcional) Estilos de la interfaz   
 └── script.js # Lógica en JavaScript para agregar y sortear amigos
 
 ---
