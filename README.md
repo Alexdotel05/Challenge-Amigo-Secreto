@@ -48,3 +48,11 @@ Permite:
 
 ---
 
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.
+Puedes usarlo, modificarlo y compartirlo libremente.
+
+## 👨‍💻 Autor
+
+Desarrollado por [Alexander Ferreras Dotel].
