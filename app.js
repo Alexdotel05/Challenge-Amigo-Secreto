@@ -37,18 +37,18 @@ function actualizarListaDeAmigos() {
 
 // Función para sortear un amigo secreto aleatoriamente.
 function sortearAmigo() { 
-    if (listaDeAmigos.length === 0) { // Validar que la lista no esté vacía y hay nombre disponibles e lalista.
-        alert("No hay amigos para sortear");
+    if (listaDeAmigos.length < 2) { // Validar que la lista no esté vacía y hay nombre disponibles en la lista.
+        alert("No hay amigos suficientes para sortear!");
         return;
     }
-
+    
     let indiceAleatorio = Math.floor(Math.random()*listaDeAmigos.length); 
     let amigoSorteado = listaDeAmigos[indiceAleatorio]; // Seleccionar amigo secreto aleatoriamente
-    document.getElementById('resultado').innerHTML = "El amigo secreto es: " + `"${amigoSorteado}"`; // Mostrar resultado del amigo secreto sorteado.
+    document.getElementById('resultado').innerHTML = `<li>El amigo secreto es:${amigoSorteado}"`; // Mostrar resultado del amigo secreto sorteado.
     reiniciarJuego();
 }
   
-//Función para reiniciar la ista y el imput
+//Función para reiniciar la lista y el imput
 function reiniciarJuego() { 
     listaDeAmigos = []; // Vaciar array interno
 
