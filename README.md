@@ -59,4 +59,4 @@ Puedes usarlo, modificarlo y compartirlo libremente.
 
 ## 👨‍💻 Autor
 
-Desarrollado por Alexander Ferreras Dotel.
+Desarrollado por: Alexander Ferreras Dotel.
